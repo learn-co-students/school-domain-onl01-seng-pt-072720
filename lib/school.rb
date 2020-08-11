@@ -4,29 +4,24 @@ class School
     @name = name
     @roster = {}
   end
-  
-  def name
-    @name
-  end
-  
+
   def roster
     @roster
   end
   
   def add_student(name, grade)
-    @name
-    @grade
     if roster.include?(grade) 
       roster[grade] << name
     else
       roster[grade] = []
       roster[grade] << name
     end
+    
+    #roster[grade] ||= []   --> also works.If roster[grade] is an empty array, then evaluate next statement. else create empty array
+    #roster[grade] << student_name
   end
   
   def grade(grade)
-    @roster
-    @grade
     roster[grade]
   end
   
