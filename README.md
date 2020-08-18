@@ -1,4 +1,28 @@
-# Domain Model for a School
+attr_accessor :color, :size, :material, :condition
+  attr_reader :brand	  attr_reader :brand
+
+
+  BRANDS = []
+
+  def initialize(brand)	  def initialize(brand)
+    @brand = brand	    @brand = brand
+    if !(BRANDS.include?(@brand))
+      BRANDS << @brand
+    end
+  end	  
+end
+
+
+
+  def cobble	  def cobble
+    self.condition = "new"	    self.condition = "new"
+    puts "Your shoe is as good as new!"	    puts "Your shoe is as good as new!"
+  end	 
+ end
+
+
+end 
+	end# Domain Model for a School
 
 ## Objectives
 
